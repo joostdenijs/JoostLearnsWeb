@@ -1,8 +1,41 @@
-﻿h1
+﻿#title
 {
     font-family: 'Times New Roman';
     font-size: 30px;
     color: #0000FF;
     text-transform: none;
     font-weight: bold;
+    text-align: center;
+}
+
+div.side {
+    width: 178px;
+}
+
+div.sides {
+    background: center;
+    background-image: url("images/movie_poster.jpg");
+    background-repeat: repeat-y;
+    width: 170px;
+    height: 1000px;
+}
+
+#content {
+    width: 1000px;
+    height: 1000px;
+    position: relative;
+    margin: auto;
+    background-color: #f6f1cc;
+}
+
+body {
+    background-color: #000000;
+    top: 0px;
+    min-height: 100%;
+    margin: 0px;
+}
+
+div.content_text {
+    margin: 2px;
+    margin-top: 15px;
 }

@@ -1,12 +1,78 @@
-﻿
-<html>
-    <head>
-        <title>The Big Lebowski</title>
-    </head>
-    <body>
-        <link href="StyleSheet.css" rel="stylesheet" />
-        <h1 id ="title">
-            The Big Lebowski
-        </h1>
-    </body>
+﻿<!DOCTYPE html>
+
+<html lang="en-us" style="height: 100%;">
+<head>
+    <title>The Big Lebowski</title>
+
+    <meta name="keywords" content="The Big Lebowski, Big Lebowski" />
+    <meta name="description" content="Page to promote the Big Lebowski and how awesome it is" />
+    <meta name="author" content="Joost de Nijs" />
+
+    <link href="StyleSheet.css" rel="stylesheet" />
+</head>
+<body>
+    <script>
+        function clearAll() {
+            l = ["facts"];
+            for (var x = 0; x < l.length; x++) {
+                y = document.getElementById(l[x]);
+                y.style.visibility = "hidden";
+            }
+            x = document.getElementById("trailer")
+            x.innerHTML = "";
+        }
+        function viewTrailer() {
+            clearAll();
+            x = document.getElementById("trailer")
+            x.innerHTML = "<iframe width=\"640\" height=\"360\" src=\"http://www.youtube.com/embed/cd-go0oBF4Y?feature=player_detailpage\" frameborder=\"0\" allowfullscreen></iframe>";
+        }
+        function viewFacts() {
+            clearAll();
+            x = document.getElementById("facts")
+            x.style.visibility = "visible";
+        }
+        function viewQuotes() {
+            clearAll();
+            x = document.getElementById("quotes")
+            x.style.visibility = "visible";
+        }
+    </script>
+    <div id="content">
+        <div class="side" style="float: left">
+            <div class="sides">
+            </div>
+        </div>
+
+        <div class="side" style="float: right">
+            <div class="sides">
+            </div>
+        </div>
+
+        <div id="title">
+            <h1>The Big Lebowski
+            </h1>
+        </div>
+
+        <div id="choices">
+            <a href="#" class="site_choice" onclick="viewTrailer()">Trailer</a> | 
+        <a href="#" class="site_choice" onclick="viewQuotes()">Quotes</a> | 
+        <a href="#" class="site_choice" onclick="viewFacts()">Facts</a> | 
+        <a href="http://www.amazon.com/The-Big-Lebowski-Jeff-Bridges/dp/B00007ELEL" class="site_choice">Buy it</a>
+        </div>
+
+        <div class="content_text" id="trailer">
+        </div>
+
+        <div class="content_text" id="facts" style="visibility: hidden">
+            <ul>
+                <li>Release Date: March 6, 1998</li>
+            </ul>
+        </div>
+
+        <div class="content_text"id="quotes" style="visibility: hidden">
+
+        </div>
+
+    </div>
+</body>
 </html>
