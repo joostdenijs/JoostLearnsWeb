@@ -46,6 +46,12 @@
             boldIt(linkName);
         }
 
+        function tripOut() {
+            colors = ["aqua", "red", "purple", "black", "blue", "green", "orange"]
+            element = document.getElementById("title");
+            element.style.color = colors[Math.floor(Math.random() * colors.length)];
+        }
+
     </script>
     <div id="content">
         <div class="side" style="float: left">
@@ -58,7 +64,7 @@
             </div>
         </div>
 
-        <div id="title">
+        <div id="title" onmouseover="tripOut()" onmouseout="tripOut()">
             <h1>The Big Lebowski
             </h1>
         </div>
