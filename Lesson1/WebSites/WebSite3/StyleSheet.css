@@ -36,6 +36,29 @@ body {
 }
 
 div.content_text {
-    margin: 2px;
+    float: left;
+    position: absolute;
+    left: 140px;
+    top: 115px;
+    margin-left: 35px;
     margin-top: 15px;
+    width: 650px;
+    visibility: hidden;
+}
+
+#trailer {
+    margin-top: 20px;
+}
+
+text.speaker {
+    color: #f00;
+    font-style: italic;
+}
+
+p.quote {
+    margin-bottom: 15px;
+}
+
+a.site_choice {
+    font-weight: normal;
 }

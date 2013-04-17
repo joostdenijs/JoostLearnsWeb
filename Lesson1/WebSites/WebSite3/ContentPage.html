@@ -13,29 +13,39 @@
 <body>
     <script>
         function clearAll() {
-            l = ["facts"];
+            l = ["facts", "quotes", "cast"];
             for (var x = 0; x < l.length; x++) {
                 y = document.getElementById(l[x]);
                 y.style.visibility = "hidden";
             }
+            l2 = ["fact_link", "trailer_link", "quote_link", "cast_link"];
+            for (var i = 0; i < l2.length; i++) {
+                y = document.getElementById(l2[i]);
+                y.style.fontWeight = "normal";
+            }
             x = document.getElementById("trailer")
             x.innerHTML = "";
         }
+
+        function boldIt(element) {
+            element_ref = document.getElementById(element);
+            element_ref.style.fontWeight = "bold";
+        }
+
         function viewTrailer() {
             clearAll();
             x = document.getElementById("trailer")
             x.innerHTML = "<iframe width=\"640\" height=\"360\" src=\"http://www.youtube.com/embed/cd-go0oBF4Y?feature=player_detailpage\" frameborder=\"0\" allowfullscreen></iframe>";
+            boldIt("trailer_link");
         }
-        function viewFacts() {
+
+        function viewText(contentName, linkName) {
             clearAll();
-            x = document.getElementById("facts")
+            x = document.getElementById(contentName)
             x.style.visibility = "visible";
+            boldIt(linkName);
         }
-        function viewQuotes() {
-            clearAll();
-            x = document.getElementById("quotes")
-            x.style.visibility = "visible";
-        }
+
     </script>
     <div id="content">
         <div class="side" style="float: left">
@@ -54,25 +64,45 @@
         </div>
 
         <div id="choices">
-            <a href="#" class="site_choice" onclick="viewTrailer()">Trailer</a> | 
-        <a href="#" class="site_choice" onclick="viewQuotes()">Quotes</a> | 
-        <a href="#" class="site_choice" onclick="viewFacts()">Facts</a> | 
-        <a href="http://www.amazon.com/The-Big-Lebowski-Jeff-Bridges/dp/B00007ELEL" class="site_choice">Buy it</a>
+            <a href="#" class="site_choice" onclick="viewTrailer()" id="trailer_link">Trailer</a> | 
+            <a href="#" class="site_choice" onclick="viewText('quotes', 'quote_link')" id="quote_link">Quotes</a> | 
+            <a href="#" class="site_choice" onclick="viewText('facts', 'fact_link')" id="fact_link">Facts</a> | 
+            <a href="#" class="site_choice" onclick="viewText('cast', 'cast_link')" id="cast_link">Cast</a> | 
+            <a href="http://www.amazon.com/The-Big-Lebowski-Jeff-Bridges/dp/B00007ELEL" class="site_choice">Buy it</a>
         </div>
 
-        <div class="content_text" id="trailer">
+        <div id="trailer">
         </div>
 
-        <div class="content_text" id="facts" style="visibility: hidden">
+        <div class="content_text" id="facts">
             <ul>
                 <li>Release Date: March 6, 1998</li>
+                <li>Budget: $15 Million</li>
+                <li>Box Office: $46 Million</li>
+                <li>Directors: Coen Brothers</li>
+                <li>Writers: Coen Brothers</li>
             </ul>
+            Source: <a href="http://en.wikipedia.org/wiki/The_Big_Lebowski">Wikipedia</a>
         </div>
 
-        <div class="content_text"id="quotes" style="visibility: hidden">
-
+        <div class="content_text" id="quotes">
+            <p class="quote">
+                <text class="speaker">The Dude</text>: Yeah, well. The Dude abides.<br />
+                <text class="speaker">The Stranger</text>: The Dude abides. I don't know about you but I take comfort in that. It's good knowin' he's out there. The Dude. Takin' 'er easy for all us sinners. Shoosh. I sure hope he makes the finals.
+            </p>
+            <p class="quote">
+                <text class="speaker">The Dude</text>: Ah, fuck it.<br />
+                <text class="speaker">The Big Lebowski</text>: Fuck it! Yes! That's your answer. That's your answer for everything! Tattoo it on your forehead!
+            </p>
+            <p class="quote">
+                <text class="speaker">The Dude</text>: Where's the fucking money Lebowski?
+            </p>
+            Source: <a href="http://www.imdb.com/title/tt0118715/trivia?tab=qt">IMDB</a>
         </div>
 
+        <div class="content_text" id="cast">
+
+        </div>
     </div>
 </body>
 </html>
