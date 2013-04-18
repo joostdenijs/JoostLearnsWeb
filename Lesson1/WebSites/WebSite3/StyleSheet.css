@@ -12,6 +12,11 @@ div.side {
     width: 178px;
 }
 
+.left
+{
+    float: left;
+}
+
 div.sides {
     background: center;
     background-image: url("images/movie_poster.jpg");
