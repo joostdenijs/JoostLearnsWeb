@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Alpen Oberkrainer</title>
+
+    <link rel="stylesheet" type="text/css" href="StyleSheet.css" />
+</head>
+<body>
+    <script type="text/javascript" src="NavSwitch.js"></script>
+    <div class="fixedelement">
+        <div id="header">
+            <h1>Die Alpenoberkrainer</h1>
+        </div>
+
+        <div id="leftnav">
+            <ul class="verticalmenu">
+                <li>
+                    <a href="#" class="currentcontent" onclick="switchTo(this, 'home')">Home</a>
+                </li>
+                <li>
+                    <a href="#" onclick="switchTo(this, 'tourdates')">Tour Dates</a>
+                </li>
+                <li>
+                    <a href="#" onclick="switchTo(this, 'music')">Music</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="contentbody">
+        <div id="home" class="currentcontent content">
+            <h1>Welcome to the Aplenoberkrainer Homepage</h1>
+
+            <table>
+                <tr class="imageandcaption">
+                    <td>
+                        <img class="left" src="http://www.alpski-kvintet.com/sites/default/files/styles/large/public/galerije_pic/1363622482/1.jpg?itok=bblIpVMC" />
+                    </td>
+                    <td class="imagecaption">
+                        <p>We are a band that has been around since 1966 making music in the traditional alpine style. We have performed all over Europe and are regularly heard on radio stations in most EU member states.</p>
+                    </td>
+                </tr>
+            </table>
+            <table>
+                <tr class="imageandcaption">
+                <td class="imagecaption">
+                    <p>These are our current members. From left to right (Note, only those in costume are in the band): </p>
+                    <ul>
+                        <li>Janez Per</li>
+                        <li>Anita Zore</li>
+                        <li>Marjan Rolc (backrow)</li>
+                        <li>Edi Semeja</li>
+                        <li>Damir Tkavc</li>
+                        <li>Franjo Maček</li>
+                        <li>Mihael Možina</li>
+                    </ul>
+                </td>
+                <td>
+                    <img class="right" src="http://www.alpski-kvintet.com/sites/default/files/styles/large/public/galerije_pic/1363117827/525001_532550553431700_772860392_n.jpg?itok=22frb_hV" />
+                </td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="tourdates" class="content">
+            <h1>Tour Dates</h1>
+            <p>Yes we're old, but we still love to tour. Check below to see when we will next be in your area.</p>
+            <h2>April</h2>
+            <ul>
+                <li>April 24 - Berlin</li>
+                <li>April 27 - Munchen</li>
+            </ul>
+            <h2>May</h2>
+            <ul>
+                <li>May 4 - Vienna</li>
+                <li>May 7 - Salzburg</li>
+                <li>May 11 - Prague</li>
+                <li>May 18 - Budapest</li>
+            </ul>
+        </div>
+
+        <div id="music" class="content">
+            <h1>Our Music</h1>
+            <h2>Latest Album - Alpski Kvintet</h2>
+            <ul>
+                <li>
+                    <p>Polka Za Prijatelje</p> 
+                    <audio controls>
+                        <source src="http://www.alpski-kvintet.com/sites/default/files/u17/GLASBA/ALBUMI/KOMADI/VESELOZGLASBONAPREJ/1.%20POLKA%20ZA%20PRIJATELJE.mp3" type="audio/mp3">
+                        Cannot access the file from our website. Sorry
+                    </audio>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
