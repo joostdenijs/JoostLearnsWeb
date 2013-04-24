@@ -1,0 +1,13 @@
+﻿.helptip {
+    display: normal;
+    background-color: yellow;
+    border: solid;
+    border-width: 1px;
+    border-color: black;
+    position: fixed;
+    padding: 4px;
+}
+
+.invisiblehover {
+    display: none;
+}

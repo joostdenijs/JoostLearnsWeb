@@ -59,7 +59,7 @@ nav {
     position: relative;
     left: 750px;
     width: 330px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     border: solid;
     border-color: black;
     border-width: 3px;
@@ -77,7 +77,7 @@ aside audio {
     margin: 5px;
 }
 
-h3 {
+.rightfloats .rightboxheader {
     text-align: center;
     display: block;
     border-bottom: dashed;

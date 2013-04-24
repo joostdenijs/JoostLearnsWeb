@@ -2,8 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title></title>
-
+    
     <link type="text/css" href="StyleSheet.css" rel="stylesheet" />
+    <link type="text/css" href="hoverStyles.css" rel="stylesheet" />
 </head>
 <body>
     <header>Red Hot Chili Peppers</header>
@@ -19,17 +20,17 @@
         <hr />
 
         <details class="rightfloats">
-            <summary>
-                This is an expandable list
+            <summary class="rightboxheader">
+                Upcoming Tour Dates
             </summary>
             <ul>
-                <li>Info A</li>
-                <li>Info B</li>
+                <li>May 10 - Seattle, WA</li>
+                <li>May 14 - Portland, OR</li>
             </ul>
         </details>
 
         <aside class="rightfloats">
-            <h3>Slow Cheetah</h3>
+            <h3 class="rightboxheader">Slow Cheetah</h3>
             <p>Click below to listen to one of our favorite songs.</p>
             <audio controls>
                 <source src="" type="audio/mp3" />
@@ -37,8 +38,13 @@
         </aside>
 
         <section id="fundraising" class="rightfloats">
-            <h3>Fundraising Current Charity</h3>
-            <meter value="20000" min="0" max="100000"></meter>
+            <h3 class="rightboxheader">Fundraising for Charity de Jour</h3>
+            <meter value="0"  min="0" max="100000" onmouseover="metermouseover(this)" onmouseout="metermouseaway(this)"></meter>
+            <span id='fundraisermeterhovertext' class="helptip invisiblehover"></span>
+            <form id="donatenow">
+                How Much: <input type="number" name="amount" /><br />
+                <button onclick="donatemoney()">Donate Now</button>
+            </form>
         </section>
 
         <article>
@@ -48,5 +54,9 @@
     </div>
 
     <footer>&copy; 2012 Joost de Nijs </footer>
+    
+    <script type="text/javascript" src="fundraising.js"></script>
+    <script type="text/javascript" src="stylemanipulation.js"></script>
+    <script type="text/javascript" src="hovertips.js"></script>
 </body>
 </html>
