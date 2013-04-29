@@ -71,6 +71,10 @@ nav {
         margin-left: 0px;
     }
 
+aside {
+    background-color: #f8cd7c;
+}
+
 aside p {
     margin: 5px;
 }
@@ -85,6 +89,7 @@ aside audio {
     border-bottom: dashed;
     padding: 3px;
     margin: auto;
+    background-color: orange;
 }
 
 #fundraising {

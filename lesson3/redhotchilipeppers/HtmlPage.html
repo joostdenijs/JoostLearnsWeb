@@ -19,25 +19,36 @@
 
         <hr />
 
-        <details class="rightfloats">
-            <summary class="rightboxheader">
-                Upcoming Tour Dates
-            </summary>
-            <ul>
-                <li>May 10 - Seattle, WA</li>
-                <li>May 14 - Portland, OR</li>
-            </ul>
-        </details>
+        <aside class="rightfloats">
+            <h3 class="rightboxheader">Tour Dates</h3>
+            <details>
+                <summary>
+                    May
+                </summary>
+                <ul>
+                    <li>May 10 - Seattle, WA</li>
+                    <li>May 14 - Portland, OR</li>
+                </ul>
+            </details>
+            <details>
+                <summary>
+                    June
+                </summary>
+                <ul>
+                    <li>June 1 - Chicago, IL</li>
+                </ul>
+            </details>
+        </aside>
 
         <aside class="rightfloats">
-            <h3 class="rightboxheader">Slow Cheetah</h3>
+            <h3 class="rightboxheader">Come as You Are</h3>
             <p>Click below to listen to one of our favorite songs.</p>
             <audio controls>
-                <source src="" type="audio/mp3" />
+                <source src="./audio/06.mp3" type="audio/mp3" />
             </audio>
         </aside>
 
-        <section id="fundraising" class="rightfloats">
+        <aside id="fundraising" class="rightfloats">
             <h3 class="rightboxheader">Fundraising for Charity de Jour</h3>
             <meter value="0"  min="0" max="100000" onmouseover="metermouseover(this)" onmouseout="metermouseaway(this)"></meter>
             <span id='fundraisermeterhovertext' class="helptip invisiblehover"></span>
@@ -51,7 +62,7 @@
                 <input type="number" name="amount" class="donationbottomrender" />
                 <button onclick="donatemoney()" class="donationbottomrender">Donate Now</button>
             </form>
-        </section>
+        </aside>
 
         <article>
             This is where an article about the Red Hot Chili Peppers (and maybe a few images) will go.
