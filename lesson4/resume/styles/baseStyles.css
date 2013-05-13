@@ -1,6 +1,7 @@
 ﻿body {
     margin: 0px auto;
-    width: 960px;
+    max-width: 960px;
+    width: 100%;
 }
 
 h3, h4, p, dl, details {
@@ -17,7 +18,9 @@ ul {
 
 p {
     text-indent: 25px;
-    width: 620px;
+    max-width: 620px;
+    width: 100%;
+    min-width: 300px;
 }
 
 h3 {
@@ -34,7 +37,9 @@ h4{
 }
 
 .col620, .job {
-    width: 620px;
+    max-width: 620px;
+    width: 100%;
+    min-width: 300px;
 }
 
 header h1 {
@@ -72,7 +77,8 @@ nav ul {
         0px
         auto;
     position:relative;
-    top: 5px;
+    top: 3px;
+    float: clear;
 }
 
 nav li {
@@ -80,7 +86,7 @@ nav li {
     text-align: center;
     width: 140px;
     border:
-        5px
+        3px
         solid
         black;
     border-radius: 10px 10px 0px 0px;
@@ -100,13 +106,15 @@ nav li.active{
 }
 
 .resumeSection{
-    width: 920px;
+    max-width: 920px;
+    width:100%;
+    min-width: 320px;
     border:
-        5px
+        3px
         solid
         black;
     border-radius: 15px;
-    padding: 0px 5px;
+    padding: 0px 7px;
 }
 
 .resumeSection:not(.active){
@@ -162,7 +170,7 @@ aside td{
 */
 
 section.skills{
-    min-height: 500px;
+    min-height: 400px;
 }
 aside {
 }
