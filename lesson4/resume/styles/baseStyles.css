@@ -72,13 +72,13 @@ nav ul {
         0px
         auto;
     position:relative;
-    top:5px;
+    top: 5px;
 }
 
 nav li {
     display: inline-block;
-    width: 140px;
     text-align: center;
+    width: 140px;
     border:
         5px
         solid
@@ -100,6 +100,7 @@ nav li.active{
 }
 
 .resumeSection{
+    width: 920px;
     border:
         5px
         solid
@@ -112,23 +113,64 @@ nav li.active{
     display: none;
 }
 
+!important
 .resumeSection *:not(aside):not(aside *){
     padding: 0px 5px 0px 5px;
 }
 
-.otherWork>*, .schooling {
+.resumeSection>*:not(h3){
+    max-width:620px;
+}
+
+.resumeSection:not(.skills):not(.schooling):not(.otherWork)>*:not(aside):not(h3){
+    margin-left:60px;
+}
+
+.schooling>*, .otherWork>*{
+    margin-left: auto;
+    margin-right:auto;
+}
+
+.resumeSection aside{
+    margin-right: 60px;
+    margin-left: 20px;
+    background-color: lightyellow;
+    border:
+        2px
+        solid
+        lightyellow;
+    border-radius: 4px;
+    width: 296px;
+    float: right;
+    text-align: center;
+}
+
+.schooling h4, .schooling span{
+    text-align: center;
+    display: block;
+}
+
+aside td{
+    padding: 3px;
+}
+
+/*
+.resumeSection>*{    
     margin-left: auto;
     margin-right: auto;
 }
+*/
 
 section.skills{
     min-height: 500px;
 }
 aside {
-    width: 300px;
-    float: right;
 }
 
 .resumeSection>h3{
     text-align: center;
+}
+
+.resumeSection>h4{
+    padding-left:40px;
 }
