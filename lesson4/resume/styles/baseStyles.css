@@ -1,0 +1,134 @@
+﻿body {
+    margin: 0px auto;
+    width: 960px;
+}
+
+h3, h4, p, dl, details {
+    margin: 10px 10px;
+}
+
+span{
+    margin: 5px 10px;
+}
+
+ul {
+    width: auto;
+}
+
+p {
+    text-indent: 25px;
+    width: 620px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+h4{
+    font-size: 18px;
+}
+
+.col300 {
+    float: left;
+    width: 300px;
+}
+
+.col620, .job {
+    width: 620px;
+}
+
+header h1 {
+    text-align: center;
+}
+
+#baseInfo {
+    display: block;
+    min-height: 345px;
+}
+
+    #baseInfo * {
+        float: left;
+    }
+
+
+
+    #baseInfo figure {
+        float: left;
+        background-color: #c8f7f6;
+        margin: auto 10px;
+    }
+    
+
+    #baseInfo figcaption {
+        text-align: right;
+        padding-right: 10px;
+    }
+
+nav ul {
+    list-style-type: none;
+    margin:
+        0px
+        auto
+        0px
+        auto;
+    position:relative;
+    top:5px;
+}
+
+nav li {
+    display: inline-block;
+    width: 140px;
+    text-align: center;
+    border:
+        5px
+        solid
+        black;
+    border-radius: 10px 10px 0px 0px;
+    margin:
+        auto
+        0px
+        auto
+        0px;
+    font-size: 22px;
+    padding: 3px 0px 1px 0px;    
+    color: blue;     
+}
+
+nav li.active{
+    font-weight: bold;
+    border-bottom-color: white;
+}
+
+.resumeSection{
+    border:
+        5px
+        solid
+        black;
+    border-radius: 15px;
+    padding: 0px 5px;
+}
+
+.resumeSection:not(.active){
+    display: none;
+}
+
+.resumeSection *:not(aside):not(aside *){
+    padding: 0px 5px 0px 5px;
+}
+
+.otherWork>*, .schooling {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section.skills{
+    min-height: 500px;
+}
+aside {
+    width: 300px;
+    float: right;
+}
+
+.resumeSection>h3{
+    text-align: center;
+}

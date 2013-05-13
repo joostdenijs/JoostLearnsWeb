@@ -1,46 +1,50 @@
 ﻿<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head>
     <title>Joost de Nijs</title>
+    <link href="/styles/baseStyles.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <header>
-        <h1>
-            Joost de Nijs
+        <h1>Joost de Nijs
         </h1>
     </header>
-    
+
     <section id="baseInfo">
-        <figure id="joostPicture">
+        <figure id="joostPicture" class="col300">
             <img src="/images/profilePic.jpg" />
-            <figcaption >Me playing Guitar (2008)</figcaption>
+            <figcaption>Me playing Guitar (2008)</figcaption>
         </figure>
 
-        <h3>About Me</h3>
-        <p>
-            My name is Joost de Nijs.  I was born in the Netherlands, grew up in Virginia, went to college in Rhode Island, and now live outside Seattle, WA.
+        <div id="About" class="col620">
+            <h3>About Me</h3>
+            <p>
+                My name is Joost de Nijs.  I was born in the Netherlands, grew up in Virginia, went to college in Rhode Island, and now live outside Seattle, WA.
             I work at Microsoft as a Program Manager on the ASP.NET Web Tools and Framework team building web developer tooling for Visual Studio.
             Outside of work I enjoy hanging out with my girlfriend Eva and my dog Bonzai, playing music (guitar and piano), 
             and volunteering with Destination Imagination as a Regional Challenge Master.
-        </p>
+            </p>
+        </div>
 
-        <h3>Contact Info</h3>
-        <span><b>Work Email:</b> <a href="mailto:joostden@microsoft.com">joostden@microsoft.com</a></span><br />
-        <span><b>GitHub Profile:</b> <a href="https://github.com/joostdenijs">joostdenijs</a></span><br />
-        <span><b>Twitter:</b> <a href="https://twitter.com/JoostdeNijs">@JoostdeNijs</a></span><br />
+        <div id="Contact" class="col620">
+            <h3 class="col620">Contact Info</h3>
+            <span class="col620"><b>Work Email:</b> <a href="mailto:joostden@microsoft.com">joostden@microsoft.com</a></span><br />
+            <span class="col620"><b>GitHub Profile:</b> <a href="https://github.com/joostdenijs">joostdenijs</a></span><br />
+            <span class="col620"><b>Twitter:</b> <a href="https://twitter.com/JoostdeNijs">@JoostdeNijs</a></span><br />
+        </div>
     </section>
 
     <nav id="resumeNavigation">
         <ul>
-            <li><a href="#" onclick="">Microsoft</a></li>
-            <li><a href="#" onclick="">VENLab</a></li>
-            <li><a href="#" onclick="">Other Work History</a></li>
-            <li><a href="#" onclick="">Schooling</a></li>
-            <li><a href="#" onclick="">Skills</a></li>
+            <li class="active microsoft" onmouseover="switchTo(this)">Microsoft</li>
+            <li class="venlab" onmouseover="switchTo(this)">VENLab</li>
+            <li class="otherWork" onmouseover="switchTo(this)">Other Work</li>
+            <li class="schooling" onmouseover="switchTo(this)">Schooling</li>
+            <li class="skills" onmouseover="switchTo(this)">Skills</li>
         </ul>
     </nav>
 
-    <section class="resumeSection" id="Microsoft">
+    <section class="resumeSection active microsoft">
         <h3>Microsoft</h3>
         <aside>
             <table>
@@ -54,20 +58,60 @@
                 </tr>
                 <tr>
                     <td>Contact</td>
-                    <td></td>
+                    <td><a href="mailto:joostden@microsoft.com">joostden@microsoft.com</a></td>
                 </tr>
             </table>
         </aside>
 
+        <p>
+            I am a Program Manager at Microsoft in the Windows Azure organization working on the ASP.NET Web Tools and Framework team.
+            Our team delivers the framework and developer tooling for a variety of Microsoft Web Technologies (
+            <abbr title="Entity Framework">EF</abbr>, ASP.NET Web Forms, ASP.NET Web Pages,
+            <abbr title="ASP.NET Model View Controller">ASP.NET MVC</abbr>, SignalR and WebAPI).
+            We also build and ship the Azure Developer Client Libraries and
+            <abbr title="Microsoft Web Platform Installer">WebPI</abbr>,
+            and contribute to the NuGet Package Manager Open Source Project run by the Outercurve Foundation.
+        </p>
+
+        <h4>Current Responsibilities</h4>
+        <dl>
+            <dt>PM for Web Project Systems in Visual Studio</dt>
+            <dd></dd>
+
+            <dt>PM for WorkFlow Tooling in Visual Studio</dt>
+            <dd></dd>
+
+            <dt>Release Manager for Web/Azure Tooling Updates</dt>
+            <dd></dd>
+
+            <dt>Release Manager for ASP.NET Framework and Tools in Visual Studio</dt>
+            <dd></dd>
+
+            <dt>Perf PM for Visual Studio Web Tooling</dt>
+            <dd></dd>
+
+            <dt>Conference Speaker (Upcoming)</dt>
+            <dd></dd>
+        </dl>
+
+        <h4>Previous Responsibilities</h4>
+        <dl>
+            <dt>PM for Azure Client Libraries for Java</dt>
+            <dd></dd>
+
+            <dt>PM for Windows Azure Documentation</dt>
+            <dd></dd>
+        </dl>
     </section>
 
-    <section class="resumeSection" id="VENLab">
+    <section class="resumeSection venlab">
         <h3>Virtual Environment Navigation Laboratory (VENLab)</h3>
         <aside>
             <table>
                 <tr>
                     <td>Location</td>
-                    <td>Brown University,<br />Providence, RI</td>
+                    <td>Brown University,<br />
+                        Providence, RI</td>
                 </tr>
                 <tr>
                     <td>Employment Dates</td>
@@ -138,7 +182,7 @@
         </details>
     </section>
 
-    <section class="resumeSection" id="otherWork">
+    <section class="resumeSection otherWork">
         <h3>Other Work</h3>
         <p>
             Before working at either Microsoft or as a Developer at the VENLab, I had several other jobs during high school and early college.
@@ -166,7 +210,8 @@
             <span><b>Dates: </b>Summers 2004, 2005, and 2006</span><br />
             <span class="Location"><b>Location: </b>Norfolk, VA</span><br />
             <span class="website"><b>Website: </b><a href="http://www.norfolkacademy.org/community/breakthrough/contact">Breakthrough at Norfolk Academy</a></span>
-            <p>Breakthrough at Norfolk Academy is a tuition-free, academic enrichment program
+            <p>
+                Breakthrough at Norfolk Academy is a tuition-free, academic enrichment program
                  designed to prepare motivated Norfolk public middle school students for success in college-preparatory high school programs
                  and to provide talented high school and college students with hands-on teaching experience that will inspire them to pursue careers in education. 
                 The program consists of a full school day for six weeks in the summer. 
@@ -180,8 +225,8 @@
             </p>
         </details>
 
-        <details class="jobs">
-            <summary>Tutor</summary>            
+        <details class="job">
+            <summary>Tutor</summary>
             <span><b>Dates: </b>2002-2005</span><br />
             <span class="Location"><b>Location: </b>Virginia Beach, VA</span>
             <p>
@@ -190,7 +235,7 @@
         </details>
     </section>
 
-    <section class="resumeSection" id="schooling">
+    <section class="resumeSection schooling">
         <h3>Schooling</h3>
         <h4>Brown University - ScM in Computer Science</h4>
         <span><b>Graduated: </b>May 2011</span>
@@ -199,24 +244,25 @@
         </p>
         <ul>
             <li>My graduate coursework focused on Programming Languages, Machine Translation and Cloud Computing.</li>
-            <li>
-                I also served as the Head TA for a course on Cybersecurity and International Relations.  
+            <li>I also served as the Head TA for a course on Cybersecurity and International Relations.  
                 As this was the first time that course was offered, I was able to play a role in shaping the curriculum and coursework.
             </li>
-            <li>
-                Under the direction of Professor Meinholf Sellman, I wrote 
+            <li>Under the direction of Professor Meinholf Sellman, I wrote 
                 <a href="http://cs.brown.edu/research/pubs/theses/masters/2011/denijs.pdf">my master's thesis</a>
-                on Decision <abbr title="Directed Acyclic Graphs">DAGs</abbr>, 
+                on Decision
+                <abbr title="Directed Acyclic Graphs">DAGs</abbr>, 
                 as an extension of existing Decision Tree research in Machine Learning.
             </li>
-        </ul>        
+        </ul>
 
         <h4>Brown University - AB in Computer Science, AB in Political Science</h4>
         <span><b>Graduated: </b>May 2010</span>
         <p>
             After my first year, in which I made full use of Brown's Open Curriculum to explore a wide variety of academic areas,
             my coursework and studies were focused entirely on Math, Computer Science and Political Science.
-            My <abbr title="Brown's term for majors">concentrations</abbr> were in Political Science with a focus on
+            My
+            <abbr title="Brown's term for majors">concentrations</abbr>
+            were in Political Science with a focus on
             <abbr title="Studying the Political Theorists like: Aristotle, Machiavelli, Hobbes, Locke, Rousseau, etc.">Polical Theory</abbr>, and
             Computer Science with a focus on Theoretical CS.
         </p>
@@ -226,11 +272,65 @@
         <p>I attended Norfolk Academy from 1st through 12th grade, and graduated High Honor Roll.</p>
     </section>
 
-    <section class="resumeSection" id="Skills">
+    <section class="resumeSection skills">
         <h3>Skills</h3>
+
+        <div class="col300">
+            <h4>Programming/Syntax Languages</h4>
+            <ul>
+                <li>Comfortable With:
+                <ul>
+                    <li>C#</li>
+                    <li>Python</li>
+                    <li>Markdown</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>javascript</li>
+                    <li>Java</li>
+                </ul>
+                </li>
+                <li>Worked with, but not proficient:
+                <ul>
+                    <li>Scheme</li>
+                    <li>OCaml</li>
+                    <li>C</li>
+                    <li>C++</li>
+                </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="col300">
+            <h4>Application Proficiency:</h4>
+            <ul>
+                <li>MS Office</li>
+                <li>Visual Studio</li>
+                <li>Eclipse</li>
+            </ul>
+        </div>
+
+        <div class="col300">
+            <h4>Technologies Known:</h4>
+            <ul>
+                <li>ASP.NET Framework</li>
+                <li>MVC</li>
+                <li>Entity Framework</li>
+                <li>SQl Databases</li>
+                <li>Windows Azure</li>
+                <!-- These are the ones I want to be able to add to the list by the end of the year
+                <li>jQuery</li>
+                <li>knockout.js</li>
+                <li>Bootstrap</li>
+                <li>SignalR</li>
+            -->
+            </ul>
+        </div>
 
     </section>
 
     <footer></footer>
+
+    <script src="scripts/nav.js" type="text/javascript"></script>
+    <script src="scripts/jquery-2.0.0.js" type="text/javascript"></script>
 </body>
 </html>
