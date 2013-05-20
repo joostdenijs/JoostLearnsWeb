@@ -1,184 +1,84 @@
 ﻿body {
+    font-family: Cambria, 'Palatino Linotype', 'Book Antiqua', 'URW Palladio L', serif;
     margin: 0px auto;
-    max-width: 960px;
-    width: 100%;
 }
 
-h3, h4, p, dl, details {
-    margin: 10px 10px;
+section > *, header > *, footer > * {
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
-span{
-    margin: 5px 10px;
-}
-
-ul {
-    width: auto;
-}
-
-p {
-    text-indent: 25px;
-    max-width: 620px;
-    width: 100%;
-    min-width: 300px;
-}
-
-h3 {
-    font-size: 24px;
-}
-
-h4{
-    font-size: 18px;
-}
-
-.col300 {
-    float: left;
+aside, figure {
     width: 300px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.col620, .job {
-    max-width: 620px;
-    width: 100%;
-    min-width: 300px;
-}
-
-header h1 {
+header{
     text-align: center;
+}
+
+@media (min-width: 960px) {
+    section > p, div, dl, ul {
+        width: 620px;
+    }
+
+    section, header, footer, nav, body {
+        width: 960px;
+    }
+
+        section > figure {
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+
+    .resumeSection {
+        width: 954px;
+        border: 3px solid black;
+        border-radius: 15px;
+    }
+
+        .resumeSection > h3 {
+            display: none;
+        }
+}
+
+@media (min-width: 640px) and (max-width: 959px) {
+    section, header, footer, nav, body {
+        width: 640px;
+    }
+     p, div, dl, ul {
+         width: 620px;
+     }
+}
+
+@media (max-width:639px) {
+    :not(table *) {
+        min-width: 300px;
+        width: 100%;
+    }
+
+    * {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    section, header, footer, nav {
+    }
 }
 
 #baseInfo {
     display: block;
-    min-height: 345px;
+    min-height: 350px;
 }
-
-    #baseInfo * {
-        float: left;
-    }
-
-
 
     #baseInfo figure {
-        float: left;
-        background-color: #c8f7f6;
-        margin: auto 10px;
-    }
-    
-
-    #baseInfo figcaption {
-        text-align: right;
-        padding-right: 10px;
+        background-color: ivory;
+        padding: 4px;
+        border: 1px solid black;
+        margin-top: 0px;
+        margin-bottom: 0px;
     }
 
-nav ul {
-    list-style-type: none;
-    margin:
-        0px
-        auto
-        0px
-        auto;
-    position:relative;
-    top: 3px;
-    float: clear;
-}
-
-nav li {
-    display: inline-block;
-    text-align: center;
-    width: 140px;
-    border:
-        3px
-        solid
-        black;
-    border-radius: 10px 10px 0px 0px;
-    margin:
-        auto
-        0px
-        auto
-        0px;
-    font-size: 22px;
-    padding: 3px 0px 1px 0px;    
-    color: blue;     
-}
-
-nav li.active{
-    font-weight: bold;
-    border-bottom-color: white;
-}
-
-.resumeSection{
-    max-width: 920px;
-    width:100%;
-    min-width: 320px;
-    border:
-        3px
-        solid
-        black;
-    border-radius: 15px;
-    padding: 0px 7px;
-}
-
-.resumeSection:not(.active){
-    display: none;
-}
-
-!important
-.resumeSection *:not(aside):not(aside *){
-    padding: 0px 5px 0px 5px;
-}
-
-.resumeSection>*:not(h3){
-    max-width:620px;
-}
-
-.resumeSection:not(.skills):not(.schooling):not(.otherWork)>*:not(aside):not(h3){
-    margin-left:60px;
-}
-
-.schooling>*, .otherWork>*{
-    margin-left: auto;
-    margin-right:auto;
-}
-
-.resumeSection aside{
-    margin-right: 60px;
-    margin-left: 20px;
-    background-color: lightyellow;
-    border:
-        2px
-        solid
-        lightyellow;
-    border-radius: 4px;
-    width: 296px;
-    float: right;
-    text-align: center;
-}
-
-.schooling h4, .schooling span{
-    text-align: center;
-    display: block;
-}
-
-aside td{
-    padding: 3px;
-}
-
-/*
-.resumeSection>*{    
-    margin-left: auto;
-    margin-right: auto;
-}
-*/
-
-section.skills{
-    min-height: 400px;
-}
-aside {
-}
-
-.resumeSection>h3{
-    text-align: center;
-}
-
-.resumeSection>h4{
-    padding-left:40px;
-}
+    #baseInfo > * {
+    }
