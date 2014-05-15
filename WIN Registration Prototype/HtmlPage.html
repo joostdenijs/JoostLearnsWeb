@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="WINRegistration">
+<head>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+    <title>WIN Registration Prototype</title>
+</head>
+<body>
+    <h1 class="col-md-12">WIN Registration</h1>
+
+    <h2 class="col-md-12">My Teams</h2>
+    <table ng-controller="TeamsController" class="table">
+        <tr>
+            <th>Team Name</th>
+            <th>Membership Number</th>
+            <th>Registration Status</th>
+            <th>Action</th>
+        </tr>
+        <tr ng-repeat="team in teams">
+            <td>{{ team.TeamName }}</td>
+            <td>{{ team.MembershipNo }}</td>
+            <td>{{ team.RegistrationStatus }}</td>
+            <td><a href='{{ "#/team" + team.TeamId }}'>Edit</a></td>
+        </tr>
+    </table>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Create" class="btn btn-default" />
+        </div>
+    </div>
+
+    <script src="app/registration.js"></script>
+    <script src="app/controllers/TeamsController.js"></script>
+
+</body>
+</html>

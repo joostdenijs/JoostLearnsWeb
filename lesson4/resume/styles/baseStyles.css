@@ -1,6 +1,7 @@
 ﻿body {
     font-family: Cambria, 'Palatino Linotype', 'Book Antiqua', 'URW Palladio L', serif;
     margin: 0px auto;
+    max-width: 960px;
 }
 
 section > *, header > *, footer > * {
@@ -18,14 +19,19 @@ header{
     text-align: center;
 }
 
+img, figure
+{
+    max-width: 100%;
+}
+
 @media (min-width: 960px) {
     section > p, div, dl, ul {
         width: 620px;
     }
 
-    section, header, footer, nav, body {
-        width: 960px;
-    }
+    /*section, header, footer, nav, body {
+        max-width: 960px;
+    }*/
 
         section > figure {
             margin-left: 5px;
@@ -47,9 +53,9 @@ header{
     section, header, footer, nav, body {
         width: 640px;
     }
-     p, div, dl, ul {
+     /*p, div, dl, ul {
          width: 620px;
-     }
+     }*/
 }
 
 @media (max-width:639px) {
