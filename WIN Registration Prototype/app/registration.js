@@ -1,18 +1,16 @@
 ﻿/// <reference path="../Scripts/angular.min.js">
-var app = angular.module("WINRegistration", []);
+var app = angular.module('WINRegistration', ['ngRoute']);
 
-app.config((function ($routeProvider) {
+app.config(function ($routeProvider) {
     $routeProvider
         .when('/teams',
             {
                 controller: 'TeamsController',
-                templateUrl: '/app/partials/teams.html'
+                templateUrl: '/app/views/teams.html'
             })
-        //Define a route that has a route parameter in it (:customerID)
-        .when('/team/:teamID',
+        .when('/new',
             {
-                controller: 'TeamRegistrationController',
-                templateUrl: '/app/partials/customerOrders.html'
+                templateUrl: '/app/views/create.html'
             })
         .otherwise({ redirectTo: '/teams' });
 });

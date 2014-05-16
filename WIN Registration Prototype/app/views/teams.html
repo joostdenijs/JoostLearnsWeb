@@ -1,0 +1,18 @@
+﻿<h2 class="col-md-12">My Teams</h2>
+<table ng-controller="TeamsController" class="table">
+    <tr>
+        <th>Team Name</th>
+        <th>Membership Number</th>
+        <th>Registration Status</th>
+        <th>Action</th>
+    </tr>
+    <tr ng-repeat="team in teams">
+        <td>{{ team.TeamName }}</td>
+        <td>{{ team.MembershipNo }}</td>
+        <td>{{ team.RegistrationStatus }}</td>
+        <td><a href='{{ "#/team/" + team.TeamId }}'>Edit</a></td>
+    </tr>
+</table>
+<div class="form-group">
+    <a class="btn" href="#/new">Create</a>
+</div>

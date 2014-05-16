@@ -1,0 +1,29 @@
+﻿<form name="new_team_form" ng-submit="newTeamForm()">
+    <fieldset>
+        <legend>Create New Team</legend>
+
+        <div>
+            <label>Team Name:</label>
+            <input type="text"
+                   placeholder="Enter Team Name"
+                   name="TeamName"
+                   ng-model="newTeamName"
+                   ng-maxlength=20
+                   required />
+            <div class="error" 
+                 ng-show="new_team_form.TeamName.$dirty && new_team_form.TeamName.$invalid">
+                <small class="error"
+                       ng-show="new_team_form.TeamName.$error.requried">
+                    Your Team Name is required.
+                </small>
+                <small class="error"
+                       ng-show="new_team_form.TeamName.$error.maxlength">
+                    Your Team Name cannot be longer than 20 characters.
+                </small>
+            </div>
+        </div>
+
+
+        <button type="submit" class="btn">Submit</button>
+    </fieldset>
+</form>
