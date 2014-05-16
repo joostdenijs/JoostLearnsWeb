@@ -1,13 +1,13 @@
 ﻿<form name="new_team_form" ng-submit="newTeamForm()">
     <fieldset>
-        <legend>Create New Team</legend>
+        <legend>Register a New Team</legend>
 
         <div>
             <label>Team Name:</label>
             <input type="text"
                    placeholder="Enter Team Name"
                    name="TeamName"
-                   ng-model="newTeamName"
+                   ng-model="newteam.TeamName"
                    ng-maxlength=20
                    required />
             <div class="error" 
@@ -23,7 +23,51 @@
             </div>
         </div>
 
+        <div>
+            <p>The Membership Name and Number required below, should be the same as you recieved from registering with Destination Imagination.
+              If you have not yet registered with Destination Imagination, please go to their 
+            <a href="http://www.destinationimagination.org/challenge-program/start-a-team">registration page</a> and do so now.</p>
+        </div>
 
-        <button type="submit" class="btn">Submit</button>
+        <div>
+            <label>Membership Name:</label>
+            <input type="text"
+                   placeholder="Enter Membership Name"
+                   name="MembershipName"
+                   ng-model="newteam.MembershipName"
+                   required />
+            <div class="error"
+                 ng-show="new_team_form.MembershipName.$dirty && new_team_form.MembershipName.$invalid">
+                <small class="error"
+                       ng-show="new_team_form.MembershipName.$error.requried">
+                    Your Membership Name is required.
+                </small>
+            </div>
+        </div>
+
+        <div>
+            <label>Membership Number:</label>
+            <input type="text"
+                   placeholder="Enter Membership Number"
+                   name="MembershipNo"
+                   ng-model="newteam.MembershipNo"
+                   ng-pattern="/[1-9][0-9][0-9]-[0-9]*/"
+                   required />
+            <div class="error"
+                 ng-show="new_team_form.MembershipNo.$dirty && new_team_form.MembershipNo.$invalid">
+                <small class="error"
+                       ng-show="new_team_form.MembershipNo.$error.requried">
+                    A Membership Number is required.
+                </small>
+                <small class="error"
+                       ng-show="new_team_form.MembershipNo.$error.pattern">
+                    Improper format of the id.
+                </small>
+            </div>
+        </div>
+
+        <button type="submit" 
+                class="btn"
+                ng-disabled="new_team_form.$invalid">Submit</button>
     </fieldset>
 </form>
