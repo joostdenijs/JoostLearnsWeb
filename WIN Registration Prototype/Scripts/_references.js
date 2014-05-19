@@ -76,3 +76,5 @@
 /// <reference path="../bower/bower_components/grunt/test/fixtures/files/src/file1.js" />
 /// <reference path="../bower/bower_components/grunt/test/fixtures/files/src/file2-123.js" />
 /// <reference path="../bower/bower_components/grunt/test/fixtures/files/src/file2.js" />
+/// <reference path="../app/controllers/NewTeamController.js" />
+/// <reference path="../app/factories/TeamsFactory.js" />

@@ -10,7 +10,8 @@ app.config(function ($routeProvider) {
             })
         .when('/new',
             {
-                templateUrl: '/app/views/create.html'
+                templateUrl: '/app/views/create.html',
+                controller: 'NewTeamController'
             })
         .otherwise({ redirectTo: '/teams' });
 });
